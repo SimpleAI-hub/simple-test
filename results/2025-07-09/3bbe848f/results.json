@@ -1,0 +1,21 @@
+{
+  "contractHash": "3bbe848f",
+  "executionResults": {
+    "success": false,
+    "error": "Command failed: npx hardhat test\n",
+    "stdout": "\n\n  Counter\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should initialize count to 0\n    Function Tests\n      ✔ Should increment count\n      ✔ Should decrement count\n      ✔ Should reset count\n      ✔ Should get count\n      1) Should emit events\n    Edge Cases\n      ✔ Should revert if decrementing from 0\n      ✔ Should revert if non-owner tries to reset\n      ✔ Should handle large numbers (182ms)\n    Gas Usage\nIncrement Gas Used: 43455\n      2) Should measure increment gas cost\nDecrement Gas Used: 21615\n      3) Should measure decrement gas cost\nReset Gas Used: 23642\n      4) Should measure reset gas cost\n\n\n  9 passing (903ms)\n  4 failing\n\n  1) Counter\n       Function Tests\n         Should emit events:\n     AssertionError: Event \"CountIncremented\" doesn't exist in the contract\n      at onSuccess (/home/dustin/simple-test/backend/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/emit.ts:80:17)\n      at /home/dustin/simple-test/backend/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/emit.ts:130:20\n      at Context.<anonymous> (test/Counter.test.js:45:7)\n\n  2) Counter\n       Gas Usage\n         Should measure increment gas cost:\n     TypeError: receipt.gasUsed.toNumber is not a function\n      at Context.<anonymous> (test/Counter.test.js:77:30)\n\n  3) Counter\n       Gas Usage\n         Should measure decrement gas cost:\n     TypeError: receipt.gasUsed.toNumber is not a function\n      at Context.<anonymous> (test/Counter.test.js:85:30)\n\n  4) Counter\n       Gas Usage\n         Should measure reset gas cost:\n     TypeError: receipt.gasUsed.toNumber is not a function\n      at Context.<anonymous> (test/Counter.test.js:93:30)\n\n\n\n",
+    "stderr": "",
+    "executionTime": "34.38s",
+    "testsPassed": 0,
+    "testsFailed": "unknown"
+  },
+  "metadata": {
+    "model": "gemini-1.5-flash",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-09T20:28:19.407Z",
+    "totalExecutionTime": "40.63s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-09T20:28:53.805Z"
+}
