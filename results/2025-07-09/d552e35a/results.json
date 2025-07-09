@@ -1,0 +1,21 @@
+{
+  "contractHash": "d552e35a",
+  "executionResults": {
+    "success": false,
+    "error": "Command failed: npx hardhat compile\nParserError: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.\n --> contracts/Calculator.sol:1:1:\n  |\n1 | ● // SPDX-License-Identifier: MIT\n  | ^\n\n\nError HH600: Compilation failed\nHardhatError: HH600: Compilation failed\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:499:15)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at OverriddenTaskDefinition._action (/home/dustin/simple-test/backend/node_modules/@typechain/hardhat/src/index.ts:28:30)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at Environment.run (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:1428:63)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at Environment.run (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:1508:7)\n",
+    "stdout": "\n",
+    "stderr": "ParserError: Expected pragma, import directive or contract/interface/library/struct/enum/constant/function/error definition.\n --> contracts/Calculator.sol:1:1:\n  |\n1 | ● // SPDX-License-Identifier: MIT\n  | ^\n\n\nError HH600: Compilation failed\nHardhatError: HH600: Compilation failed\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:499:15)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at OverriddenTaskDefinition._action (/home/dustin/simple-test/backend/node_modules/@typechain/hardhat/src/index.ts:28:30)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at Environment.run (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:1428:63)\n    at Environment._runTaskDefinition (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)\n    at Environment.run (/home/dustin/simple-test/backend/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)\n    at SimpleTaskDefinition.action (/home/dustin/simple-test/backend/node_modules/hardhat/src/builtin-tasks/compile.ts:1508:7)\n",
+    "executionTime": "31.60s",
+    "testsPassed": 0,
+    "testsFailed": "unknown"
+  },
+  "metadata": {
+    "model": "gemini-1.5-flash",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-09T20:23:16.698Z",
+    "totalExecutionTime": "38.81s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-09T20:23:48.329Z"
+}
