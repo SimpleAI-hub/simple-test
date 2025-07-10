@@ -1,0 +1,44 @@
+{
+  "contractHash": "6c1a618c",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SimpleStorage\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should set the initial number to 42\n    Function Tests\n      ✔ Should set the number correctly\n      ✔ Should emit NumberChanged event\n      ✔ Should double the number correctly\n      1) Should emit NumberChanged event after doubling\n    Edge Cases\n      ✔ Should revert if a non-owner tries to set the number\n      ✔ Should revert if a non-owner tries to double the number\n      2) Should handle large numbers\n      ✔ Should handle zero\n    Gas Usage\nGas used for setNumber: 29918\n      ✔ Should measure gas usage for setNumber\nGas used for doubleNumber: 28467\n      ✔ Should measure gas usage for doubleNumber\n\n\n  10 passing (574ms)\n  2 failing\n\n  1) SimpleStorage\n       Function Tests\n         Should emit NumberChanged event after doubling:\n     AssertionError: Expected event \"NumberChanged\" to be emitted, but it wasn't\n      at /home/dustin/simple-test/backend/temp/project_6c1a618c/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/emit.ts:130:20\n      at Context.<anonymous> (test/SimpleStorage.test.js:41:7)\n\n  2) SimpleStorage\n       Edge Cases\n         Should handle large numbers:\n     TypeError: Cannot read properties of undefined (reading 'from')\n      at Context.<anonymous> (test/SimpleStorage.test.js:56:44)\n      at processImmediate (node:internal/timers:483:21)\n\n\n\n",
+    "executionTime": "39.87s",
+    "testsPassed": {
+      "passed": 10,
+      "failed": 2,
+      "individual": [
+        {
+          "name": "Should emit NumberChanged event after doubling",
+          "passed": false,
+          "describe": "1) Should emit NumberChanged event after doubling"
+        },
+        {
+          "name": "Should handle large numbers",
+          "passed": false,
+          "describe": "2) Should handle large numbers"
+        },
+        {
+          "name": "SimpleStorage",
+          "passed": false,
+          "describe": "1) SimpleStorage"
+        },
+        {
+          "name": "SimpleStorage",
+          "passed": false,
+          "describe": "2) SimpleStorage"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "gemini-1.5-flash",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T03:19:57.603Z",
+    "totalExecutionTime": "49.23s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T03:20:38.240Z"
+}
