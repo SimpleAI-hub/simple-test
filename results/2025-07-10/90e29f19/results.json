@@ -1,0 +1,94 @@
+{
+  "contractHash": "90e29f19",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SimpleStorage\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should set the initial number to 42\n    Function Tests\n      ✔ Should set the number correctly\n      ✔ Should emit NumberChanged event\n      ✔ Should double the number correctly\n      1) Should emit NumberChanged event on double\n    Edge Cases\n      ✔ Should revert if not owner sets the number\n      ✔ Should revert if not owner doubles the number\n      2) Should handle large numbers\n      ✔ Should handle zero\n    Gas Usage\nGas used for setNumber: 29918\n      ✔ Should measure gas usage for setNumber\nGas used for doubleNumber: 28467\n      ✔ Should measure gas usage for doubleNumber\n\n\n  10 passing (590ms)\n  2 failing\n\n  1) SimpleStorage\n       Function Tests\n         Should emit NumberChanged event on double:\n     AssertionError: Expected event \"NumberChanged\" to be emitted, but it wasn't\n      at /home/dustin/simple-test/backend/temp/project_90e29f19/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/emit.ts:130:20\n      at Context.<anonymous> (test/SimpleStorage.test.js:41:7)\n\n  2) SimpleStorage\n       Edge Cases\n         Should handle large numbers:\n     TypeError: Cannot read properties of undefined (reading 'from')\n      at Context.<anonymous> (test/SimpleStorage.test.js:56:44)\n      at processImmediate (node:internal/timers:483:21)\n\n\n\n",
+    "executionTime": "48.32s",
+    "testsPassed": {
+      "passed": 10,
+      "failed": 2,
+      "individual": [
+        {
+          "name": "Should set the right owner",
+          "passed": true,
+          "describe": "Deployment"
+        },
+        {
+          "name": "Should set the initial number to 42",
+          "passed": true,
+          "describe": "Deployment"
+        },
+        {
+          "name": "Should set the number correctly",
+          "passed": true,
+          "describe": "Function Tests"
+        },
+        {
+          "name": "Should emit NumberChanged event",
+          "passed": true,
+          "describe": "Function Tests"
+        },
+        {
+          "name": "Should double the number correctly",
+          "passed": true,
+          "describe": "Function Tests"
+        },
+        {
+          "name": "Should emit NumberChanged event on double",
+          "passed": false,
+          "describe": "1) Should emit NumberChanged event on double"
+        },
+        {
+          "name": "Should revert if not owner sets the number",
+          "passed": true,
+          "describe": "Edge Cases"
+        },
+        {
+          "name": "Should revert if not owner doubles the number",
+          "passed": true,
+          "describe": "Edge Cases"
+        },
+        {
+          "name": "Should handle large numbers",
+          "passed": false,
+          "describe": "2) Should handle large numbers"
+        },
+        {
+          "name": "Should handle zero",
+          "passed": true,
+          "describe": "2) Should handle large numbers"
+        },
+        {
+          "name": "Should measure gas usage for setNumber",
+          "passed": true,
+          "describe": "Gas used for setNumber: 29918"
+        },
+        {
+          "name": "Should measure gas usage for doubleNumber",
+          "passed": true,
+          "describe": "Gas used for doubleNumber: 28467"
+        },
+        {
+          "name": "SimpleStorage",
+          "passed": false,
+          "describe": "1) SimpleStorage"
+        },
+        {
+          "name": "SimpleStorage",
+          "passed": false,
+          "describe": "2) SimpleStorage"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "gemini-1.5-flash",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T03:26:01.715Z",
+    "totalExecutionTime": "56.48s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T03:26:50.699Z"
+}
