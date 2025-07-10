@@ -1,0 +1,59 @@
+{
+  "contractHash": "c96b77a1",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  ERC721Creator\n    Deployment\n      ✔ Should set the correct implementation address\n      1) Should deploy successfully\n    Function Tests\n      ✔ Should return the correct implementation address\n    Edge Cases\n      ✔ Should revert if initialization fails\n    Gas Usage\n      2) Should measure gas usage for implementation()\n    Security\n      ✔ Should check for reentrancy vulnerabilities (Not applicable for this contract)\n      ✔ Should check for potential implementation upgrade issues (Needs mock for proper testing)\n\n\n  5 passing (634ms)\n  2 failing\n\n  1) ERC721Creator\n       Deployment\n         Should deploy successfully:\n     AssertionError: expected undefined to be a string\n      at Context.<anonymous> (test/ERC721Creator.test.js:24:43)\n      at processImmediate (node:internal/timers:483:21)\n\n  2) ERC721Creator\n       Gas Usage\n         Should measure gas usage for implementation():\n     TypeError: tx.wait is not a function\n      at Context.<anonymous> (test/ERC721Creator.test.js:48:32)\n\n\n\n",
+    "executionTime": "45.48s",
+    "testsPassed": {
+      "passed": 5,
+      "failed": 2,
+      "individual": [
+        {
+          "name": "Should set the correct implementation address",
+          "passed": true,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should deploy successfully",
+          "passed": false,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should return the correct implementation address",
+          "passed": true,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should revert if initialization fails",
+          "passed": true,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should measure gas usage for implementation()",
+          "passed": false,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should check for reentrancy vulnerabilities (Not applicable for this contract)",
+          "passed": true,
+          "describe": "ERC721Creator"
+        },
+        {
+          "name": "Should check for potential implementation upgrade issues (Needs mock for proper testing)",
+          "passed": true,
+          "describe": "ERC721Creator"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "Simple AI V1.0.4",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T04:12:47.588Z",
+    "totalExecutionTime": "53.06s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T04:13:33.871Z"
+}
