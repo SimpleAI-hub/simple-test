@@ -1,0 +1,85 @@
+{
+  "contractHash": "4aa43e2b",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SimpleStorage\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should initialize storedNumber to 42\n    Function Tests\n      ✔ Should set the number correctly\n      ✔ Should emit NumberChanged event\n      ✔ Should double the number correctly\n      ✔ Should emit NumberChanged event on doubleNumber\n    Edge Cases\n      ✔ Should revert if a non-owner tries to set the number\n      ✔ Should revert if a non-owner tries to double the number\n      ✔ Should handle large numbers\n      ✔ Should handle zero\n    Gas Usage\nGas used for setNumber: 29918\n      ✔ Should measure gas usage for setNumber\nGas used for doubleNumber: 29812\n      ✔ Should measure gas usage for doubleNumber\n\n\n  12 passing (695ms)\n\n",
+    "compilationOutput": "Compiled 1 Solidity file successfully (evm target: paris).\n",
+    "executionTime": "13.54s",
+    "testsPassed": {
+      "passed": 12,
+      "failed": 0,
+      "individual": [
+        {
+          "name": "Should set the right owner",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should initialize storedNumber to 42",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should set the number correctly",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should emit NumberChanged event",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should double the number correctly",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should emit NumberChanged event on doubleNumber",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should revert if a non-owner tries to set the number",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should revert if a non-owner tries to double the number",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should handle large numbers",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should handle zero",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should measure gas usage for setNumber",
+          "passed": true,
+          "describe": "SimpleStorage"
+        },
+        {
+          "name": "Should measure gas usage for doubleNumber",
+          "passed": true,
+          "describe": "SimpleStorage"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "gemini-1.5-flash",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T03:40:59.507Z",
+    "totalExecutionTime": "22.91s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T03:41:13.673Z"
+}
