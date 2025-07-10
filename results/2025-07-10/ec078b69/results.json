@@ -1,0 +1,124 @@
+{
+  "contractHash": "ec078b69",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SimpleAIToken\n    Deployment\n      ✔ Should deploy the contract\n      ✔ Should set the correct initial tax rate\n      ✔ Should set the correct initial tax wallet\n      ✔ Should mint the max supply to the owner\n    Function Tests\n      ✔ Should set tax rate\n      ✔ Should emit TaxRateUpdated event\n      ✔ Should set tax wallet\n      ✔ Should emit TaxWalletUpdated event\n      ✔ Should exclude from tax\n      1) Should transfer tokens with tax\n      ✔ Should transfer tokens without tax for excluded\n      ✔ Should burn tokens\n    Edge Cases\n      ✔ Should revert if setting tax rate too high\n      ✔ Should revert if setting tax wallet to zero address\n      ✔ Should handle zero transfer amount\n      ✔ Should handle zero burn amount\n      ✔ Should revert if burning more tokens than balance\n      ✔ Should revert if transferring more tokens than balance\n    Gas usage\nGas used for transfer: 53773\n      ✔ Should test gas usage for transfer\nGas used for burn: 33713\n      ✔ Should test gas usage for burn\n\n\n  19 passing (772ms)\n  1 failing\n\n  1) SimpleAIToken\n       Function Tests\n         Should transfer tokens with tax:\n     TypeError: Cannot mix BigInt and other types, use explicit conversions\n      at Context.<anonymous> (test/SimpleAIToken.test.js:56:33)\n\n\n\n",
+    "executionTime": "41.83s",
+    "testsPassed": {
+      "passed": 19,
+      "failed": 1,
+      "individual": [
+        {
+          "name": "Should deploy the contract",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should set the correct initial tax rate",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should set the correct initial tax wallet",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should mint the max supply to the owner",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should set tax rate",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should emit TaxRateUpdated event",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should set tax wallet",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should emit TaxWalletUpdated event",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should exclude from tax",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should transfer tokens with tax",
+          "passed": false,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should transfer tokens without tax for excluded",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should burn tokens",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if setting tax rate too high",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if setting tax wallet to zero address",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should handle zero transfer amount",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should handle zero burn amount",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if burning more tokens than balance",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if transferring more tokens than balance",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should test gas usage for transfer",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should test gas usage for burn",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "Simple AI V1.0.4",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T04:25:57.762Z",
+    "totalExecutionTime": "52.10s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T04:26:40.310Z"
+}
