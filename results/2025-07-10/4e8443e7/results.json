@@ -1,0 +1,124 @@
+{
+  "contractHash": "4e8443e7",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SimpleAIToken\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should have correct initial supply\n      ✔ Should deploy with correct name and symbol\n      ✔ Should set the tax wallet correctly\n      ✔ Should exclude owner and contract from tax\n    Function Tests\n      1) Should transfer tokens with tax deduction\n      ✔ Should transfer tokens without tax for excluded address\n      2) Should transfer using transferFrom\n      ✔ Should update tax rate\n      ✔ Should update tax wallet\n      ✔ Should exclude and include address from tax\n      3) Should burn tokens\n      ✔ Should emit TaxRateUpdated event\n      ✔ Should emit TaxWalletUpdated event\n    Edge Cases\n      ✔ Should revert if tax rate is too high\n      ✔ Should revert if setting tax wallet to zero address\n      ✔ Should revert if transfering more tokens than balance\n      ✔ Should revert if burning more tokens than balance\n    Gas Usage\nGas used for transfer: 53773\n      ✔ Should measure gas usage for transfer\nGas used for burn: 33713\n      ✔ Should measure gas usage for burn\n\n\n  17 passing (821ms)\n  3 failing\n\n  1) SimpleAIToken\n       Function Tests\n         Should transfer tokens with tax deduction:\n     TypeError: ethers.parseUnits(...).sub is not a function\n      at Context.<anonymous> (test/SimpleAIToken.test.js:45:68)\n\n  2) SimpleAIToken\n       Function Tests\n         Should transfer using transferFrom:\n     Error: VM Exception while processing transaction: reverted with reason string 'ERC20: insufficient allowance'\n    at SimpleAIToken.decreaseAllowance (@openzeppelin/contracts/token/ERC20/ERC20.sol:200)\n    at SimpleAIToken.transferFrom (@openzeppelin/contracts/token/ERC20/ERC20.sol:160)\n    at EdrProviderWrapper.request (node_modules/hardhat/src/internal/hardhat-network/provider/provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:181:18)\n    at send (node_modules/ethers/src.ts/contract/contract.ts:313:20)\n    at Proxy.transferFrom (node_modules/ethers/src.ts/contract/contract.ts:352:16)\n    at Context.<anonymous> (test/SimpleAIToken.test.js:61:7)\n  \n\n  3) SimpleAIToken\n       Function Tests\n         Should burn tokens:\n     TypeError: initialBalance.sub is not a function\n      at Context.<anonymous> (test/SimpleAIToken.test.js:83:54)\n\n\n\n",
+    "executionTime": "12.59s",
+    "testsPassed": {
+      "passed": 17,
+      "failed": 3,
+      "individual": [
+        {
+          "name": "Should set the right owner",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should have correct initial supply",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should deploy with correct name and symbol",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should set the tax wallet correctly",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should exclude owner and contract from tax",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should transfer tokens with tax deduction",
+          "passed": false,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should transfer tokens without tax for excluded address",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should transfer using transferFrom",
+          "passed": false,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should update tax rate",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should update tax wallet",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should exclude and include address from tax",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should burn tokens",
+          "passed": false,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should emit TaxRateUpdated event",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should emit TaxWalletUpdated event",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if tax rate is too high",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if setting tax wallet to zero address",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if transfering more tokens than balance",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should revert if burning more tokens than balance",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should measure gas usage for transfer",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        },
+        {
+          "name": "Should measure gas usage for burn",
+          "passed": true,
+          "describe": "SimpleAIToken"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "Simple AI V1.0.4",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-10T04:35:36.780Z",
+    "totalExecutionTime": "24.88s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-10T04:35:49.962Z"
+}
