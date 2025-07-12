@@ -1,0 +1,164 @@
+{
+  "contractHash": "affa5035",
+  "executionResults": {
+    "success": true,
+    "output": "\n\n  SHIBE\n    Deployment\n      ✔ Should set the right owner\n      ✔ Should have correct initial supply\n      ✔ Should have correct fee address\n      ✔ Should assign initial balances correctly\n    Function Tests\n      ✔ Should transfer tokens correctly\n      ✔ Should approve spender correctly\n      1) Should transferFrom tokens correctly\n      2) Should open trading and set uniPair\n      3) Should reduce fees\n      4) Should remove limits\n      5) Should update swapback\n      6) Should transfer stuck ETH\n      7) Should transfer stuck token (ERC20)\n    Edge Cases\n      8) Should revert transfer from zero address\n      ✔ Should revert transfer to zero address\n      ✔ Should revert transfer exceeding balance\n      9) Should revert approval from zero address\n      10) Should revert approval to zero address\n      ✔ Should revert transferFrom with insufficient allowance\n      11) Should revert transferFrom from zero address\n      12) Should revert transferFrom to zero address\n      ✔ Should revert reduceFees with higher new fees\n      13) Should revert transfer before liquidity is added\n    Gas Usage\nGas used for transfer: 60744\n      ✔ Should test transfer gas usage\nGas used for approve: 46253\n      ✔ Should test approve gas usage\n      14) Should test transferFrom gas usage\n    Events\n      ✔ Should emit Transfer event on transfer\n      ✔ Should emit Approval event on approve\n\n\n  14 passing (1s)\n  14 failing\n\n  1) SHIBE\n       Function Tests\n         Should transferFrom tokens correctly:\n     Error: VM Exception while processing transaction: reverted with reason string 'ERC20: insufficient allowance'\n    at SHIBE.onlyOwner (contracts/Context.sol:243)\n    at SHIBE._spendAllowance (contracts/Context.sol:202)\n    at SHIBE.transferFrom (contracts/Context.sol:134)\n    at EdrProviderWrapper.request (node_modules/hardhat/src/internal/hardhat-network/provider/provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:181:18)\n    at send (node_modules/ethers/src.ts/contract/contract.ts:313:20)\n    at Proxy.transferFrom (node_modules/ethers/src.ts/contract/contract.ts:352:16)\n    at Context.<anonymous> (test/Context.test.js:50:7)\n  \n\n  2) SHIBE\n       Function Tests\n         Should open trading and set uniPair:\n     Error: Transaction reverted: function returned an unexpected amount of data\n    at SHIBE.openTrading (contracts/Context.sol:388)\n    at EdrProviderWrapper.request (node_modules/hardhat/src/internal/hardhat-network/provider/provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:181:18)\n    at send (node_modules/ethers/src.ts/contract/contract.ts:313:20)\n    at Proxy.openTrading (node_modules/ethers/src.ts/contract/contract.ts:352:16)\n    at Context.<anonymous> (test/Context.test.js:55:9)\n  \n\n  3) SHIBE\n       Function Tests\n         Should reduce fees:\n     AssertionError: expected [Function buyFeeProcent] to equal 10\n      at Context.<anonymous> (test/Context.test.js:61:46)\n\n  4) SHIBE\n       Function Tests\n         Should remove limits:\n     HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type function\n      at normalizeToBigInt (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/hardhat/src/common/bigInt.ts:47:13)\n      at Proxy.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/bigNumber.ts:171:41)\n      at Proxy.overwritingMethodWrapper (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)\n      at doAsserterAsyncAndAddThen (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai-as-promised/lib/chai-as-promised.js:289:22)\n      at Proxy.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai-as-promised/lib/chai-as-promised.js:255:20)\n      at Proxy.overwritingMethodWrapper (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)\n      at Context.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/test/Context.test.js:68:46)\n\n  5) SHIBE\n       Function Tests\n         Should update swapback:\n     HardhatError: HH17: The input value cannot be normalized to a BigInt: Unsupported type undefined\n      at normalizeToBigInt (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/hardhat/src/common/bigInt.ts:47:13)\n      at Proxy.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/@nomicfoundation/hardhat-chai-matchers/src/internal/bigNumber.ts:171:41)\n      at Proxy.overwritingMethodWrapper (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)\n      at doAsserterAsyncAndAddThen (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai-as-promised/lib/chai-as-promised.js:289:22)\n      at Proxy.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai-as-promised/lib/chai-as-promised.js:255:20)\n      at Proxy.overwritingMethodWrapper (/home/dustin/simple-test/backend/temp/project_affa5035/node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)\n      at Context.<anonymous> (/home/dustin/simple-test/backend/temp/project_affa5035/test/Context.test.js:73:43)\n\n  6) SHIBE\n       Function Tests\n         Should transfer stuck ETH:\n\n      AssertionError: expected 10000000000000000000000 to be above 10000000000000000000000.\n      + expected - actual\n\n\n      at Context.<anonymous> (test/Context.test.js:81:36)\n\n  7) SHIBE\n       Function Tests\n         Should transfer stuck token (ERC20):\n     TypeError: unsupported addressable value (argument=\"target\", value=null, code=INVALID_ARGUMENT, version=6.15.0)\n      at makeError (node_modules/ethers/src.ts/utils/errors.ts:691:21)\n      at assert (node_modules/ethers/src.ts/utils/errors.ts:719:25)\n      at assertArgument (node_modules/ethers/src.ts/utils/errors.ts:731:5)\n      at resolveAddress (node_modules/ethers/src.ts/address/checks.ts:122:19)\n      at /home/dustin/simple-test/backend/temp/project_affa5035/node_modules/ethers/src.ts/contract/contract.ts:172:60\n      at ParamType.#walkAsync (node_modules/ethers/src.ts/abi/fragments.ts:779:24)\n      at ParamType.walkAsync (node_modules/ethers/src.ts/abi/fragments.ts:797:24)\n      at /home/dustin/simple-test/backend/temp/project_affa5035/node_modules/ethers/src.ts/contract/contract.ts:170:22\n      at Array.map (<anonymous>)\n      at resolveArgs (node_modules/ethers/src.ts/contract/contract.ts:169:37)\n\n  8) SHIBE\n       Edge Cases\n         Should revert transfer from zero address:\n     AssertionError: Expected transaction to be reverted with reason 'Transfer from the zero address not allowed.', but it reverted with reason 'Transfer to the zero address not allowed.'\n      at Context.<anonymous> (test/Context.test.js:96:7)\n\n  9) SHIBE\n       Edge Cases\n         Should revert approval from zero address:\n     AssertionError: Expected transaction to be reverted with reason 'ERC20: approve from the zero address', but it reverted with reason 'ERC20: approve to the zero address'\n      at Context.<anonymous> (test/Context.test.js:108:9)\n\n  10) SHIBE\n       Edge Cases\n         Should revert approval to zero address:\n     AssertionError: Expected transaction to be reverted with reason 'ERC20: approve to the zero address', but it didn't revert\n      at Context.<anonymous> (test/Context.test.js:112:9)\n\n  11) SHIBE\n       Edge Cases\n         Should revert transferFrom from zero address:\n     AssertionError: Expected transaction to be reverted with reason 'ERC20: transfer from the zero address', but it reverted with reason 'ERC20: insufficient allowance'\n      at Context.<anonymous> (test/Context.test.js:119:9)\n\n  12) SHIBE\n       Edge Cases\n         Should revert transferFrom to zero address:\n     AssertionError: Expected transaction to be reverted with reason 'ERC20: transfer to the zero address', but it reverted with reason 'ERC20: insufficient allowance'\n      at Context.<anonymous> (test/Context.test.js:124:9)\n\n  13) SHIBE\n       Edge Cases\n         Should revert transfer before liquidity is added:\n     AssertionError: Expected transaction to be reverted with reason 'Liquidity pair not yet created.', but it didn't revert\n      at Context.<anonymous> (test/Context.test.js:132:9)\n\n  14) SHIBE\n       Gas Usage\n         Should test transferFrom gas usage:\n     Error: VM Exception while processing transaction: reverted with reason string 'ERC20: insufficient allowance'\n    at SHIBE.onlyOwner (contracts/Context.sol:243)\n    at SHIBE._spendAllowance (contracts/Context.sol:202)\n    at SHIBE.transferFrom (contracts/Context.sol:134)\n    at EdrProviderWrapper.request (node_modules/hardhat/src/internal/hardhat-network/provider/provider.ts:359:41)\n    at HardhatEthersSigner.sendTransaction (node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:181:18)\n    at send (node_modules/ethers/src.ts/contract/contract.ts:313:20)\n    at Proxy.transferFrom (node_modules/ethers/src.ts/contract/contract.ts:352:16)\n    at Context.<anonymous> (test/Context.test.js:153:18)\n  \n\n\n\n",
+    "executionTime": "54.31s",
+    "testsPassed": {
+      "passed": 14,
+      "failed": 14,
+      "individual": [
+        {
+          "name": "Should set the right owner",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should have correct initial supply",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should have correct fee address",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should assign initial balances correctly",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should transfer tokens correctly",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should approve spender correctly",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should transferFrom tokens correctly",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should open trading and set uniPair",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should reduce fees",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should remove limits",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should update swapback",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should transfer stuck ETH",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should transfer stuck token (ERC20)",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transfer from zero address",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transfer to zero address",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transfer exceeding balance",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert approval from zero address",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert approval to zero address",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transferFrom with insufficient allowance",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transferFrom from zero address",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transferFrom to zero address",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert reduceFees with higher new fees",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should revert transfer before liquidity is added",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should test transfer gas usage",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should test approve gas usage",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should test transferFrom gas usage",
+          "passed": false,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should emit Transfer event on transfer",
+          "passed": true,
+          "describe": "SHIBE"
+        },
+        {
+          "name": "Should emit Approval event on approve",
+          "passed": true,
+          "describe": "SHIBE"
+        }
+      ]
+    },
+    "gasUsage": null
+  },
+  "metadata": {
+    "model": "Simple AI V1.0.4",
+    "tokensUsed": 0,
+    "generatedAt": "2025-07-12T04:36:42.003Z",
+    "totalExecutionTime": "70.95s",
+    "hardhatVersion": "2.22.0",
+    "compiler": "solc 0.8.19"
+  },
+  "timestamp": "2025-07-12T04:37:37.206Z"
+}
